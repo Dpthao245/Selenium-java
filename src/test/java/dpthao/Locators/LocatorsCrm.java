@@ -23,8 +23,8 @@ public class LocatorsCrm {
     static public String inputSearchCustomers = "//div[@id = 'DataTables_Table_0_filter']//input[@type = 'search']";
 
     // Add new customer
-    static public String buttonSaveAndCreateContact = "//button[@class='btn btn-default save-and-add-contact customer-form-submiter']";
-    static public String buttonSave = "//button[@class='btn btn-primary only-save customer-form-submiter']";
+    static public String buttonSaveAndCreateContact = "//button[normalize-space()= 'Save and create contact']";
+    static public String buttonSave = "//div[@id= 'profile-save-section']//button[normalize-space()= 'Save']";
 
     // Tab Customer Details
     static public String tabCustomerDetails = "//a[normalize-space() = 'Customer Details']";
@@ -32,14 +32,18 @@ public class LocatorsCrm {
     static public String inputVATNumber = "//input[@id='vat']";
     static public String inputPhone = "//input[@id='phonenumber']";
     static public String inputWebsite = "//input[@id='website']";
-    static public String inputGroups = "//div[@class='dropdown bootstrap-select show-tick input-group-btn _select_input_group bs3']//div[@class='filter-option-inner-inner'][normalize-space()='Nothing selected']";
-    static public String inputCurrency = "//div[@class='dropdown bootstrap-select bs3']//button[@title='System Default']";
-    static public String inputDefault Language = "//button[@class='btn dropdown-toggle btn-default']";
+    static public String dropdownGroups = "//button[@data-id = 'groups_in[]']";
+    static public String inputSearchGroups = "//div[@app-field-wrapper = 'groups_in[]']//input[@type = 'search']";
+    static public String dropdownCurrency = "//button[@data-id = 'default_currency']";
+    static public String inputSearchCurrency = "//div[@app-field-wrapper = 'default_currency']//input[@type = 'search']";
+    static public String dropdownDefaultLanguage = "//button[@data-id= 'default_language']";
+    static public String optionVietnamese = "//span[normalize-space()='Vietnamese']";
     static public String inputAddress = "//textarea[@id='address']";
     static public String inputCity = "//input[@id='city']";
     static public String inputState = "//input[@id='state']";
     static public String inputZipCode = "//input[@id='zip']";
-    static public String inputCountry = "//div[@app-field-wrapper='country']//button[@title='Nothing selected']";
+    static public String dropdownCountry = "//button[@data-id= 'country']";
+    static public String inputSearchCountry = "//div[@app-field-wrapper = 'country']//input[@type = 'search']";
 
     // Tab Billing And Shipping
     static public String tabBillingAndShipping = "//a[normalize-space()='Billing & Shipping']";
@@ -51,58 +55,69 @@ public class LocatorsCrm {
     static public String inputBillingCity = "//input[@id='billing_city']";
     static public String inputBillingState = "//input[@id='billing_state']";
     static public String inputBillingZipCode = "//input[@id='billing_zip']";
-    static public String inputBillingCountry = "//div[@app-field-wrapper='billing_country']//button[@title='Nothing selected']";
+    static public String dropdownBillingCountry = "//button[@data-id='billing_country']";
+    static public String inputSearchBillingCountry = "//div[@app-field-wrapper='billing_country']//input[@type='search']";
     static public String inputShippingstreet = "//textarea[@id='shipping_street']";
     static public String inputShippingCity = "//input[@id='shipping_city']";
     static public String inputShippingState = "//input[@id='shipping_state']";
     static public String inputShippingZipCode = "//input[@id='shipping_zip']";
-    static public String inputShippingCountry = "//div[@app-field-wrapper='shipping_country']//button[@title='Nothing selected']";
+    static public String dropdownShippingCountry = "//button[@data-id='shipping_country']";
+    static public String inputSearchShippingCountry = "//div[@app-field-wrapper='shipping_country']//input[@type='search']";
 
     // Projects
     static public String buttonAddNewProject = "//a[normalize-space() = 'New Project']";
     static public String inputSearchProjects = "//div[@id = 'DataTables_Table_0_filter']//input[@type = 'search']";
 
     // Add new project
-    static public String headerAddNewProjectPage = "//h4[normalize-space() = 'Add new project']";
-    static public String buttonSave = "//button[@type='submit']";
+    static public String headerAddNewProjectPage = "//form[@id='project_form']/descendant::h4[normalize-space()='Add new project']";
+    static public String buttonSave = "//div[@class='panel-footer text-right']/child::button";
 
     // Tab Project
-    static public String tabProject = "//a[@role='tab'][normalize-space()='Project']";
-    static public String inputProjectName = "//input[@id='name']";
-    static public String inputCustomer = "//button[@class='btn dropdown-toggle bs-placeholder btn-default']";
-    static public String inpuCalculateProgressThroughTasks = "//input[@id='progress_from_tasks']";
-    static public String inputBillingType = "//button[@title='Fixed Rate']";
-    static public String inputStatus = "//button[@title='In Progress']";
-    static public String inputTotalRate = "//input[@id='project_cost']";
-    static public String inputEstimatedHours = "//input[@id='estimated_hours']";
-    static public String inputMembers = "//button[@title='Admin Example']";
-    static public String inputStartDate = "//input[@id='start_date']";
-    static public String inputDeadline = "//input[@id='deadline']";
-    static public String inputTags = "//input[@placeholder='Tag']";
-    static public String inputDescription = "//iframe[@id='description_ifr']";
-    static public String inputSendProjectCreatedEmail = "//input[@id='send_created_email']";
+    static public String tabProject = "//li[@role='presentation']/child::a[@aria-controls='tab_project']";
+    static public String inputProjectName = "//label[normalize-space()='* Project Name']/following-sibling::input]";
+    static public String dropdownCustomer = "//label[@for='clientid']/following-sibling::div//button;
+    static public String inputSearchCustomer = "//label[@for='clientid']/following-sibling::div//input;
+    static public String checkboxCalculateProgress = "//input[@id='progress_from_tasks']";
+    static public String sliderProgress = "//label[contains(text(),'Progress')]/following-sibling::input[@name = 'progress']";
+    static public String dropdowntBillingType = "//label[@for = 'billing_type']/following-sibling::div[contains(@class, 'dropdown ')]";
+    static public String optionBillingType = "//span[normalize-space()='Project Hours']";
+    static public String dropdownStatus = "//label[@for = 'status']/following-sibling::div[contains(@class, 'dropdown ')]";
+    static public String optionStatus = "//span[normalize-space()='On Hold']";
+    static public String inputTotalRate = "//label[normalize-space()='Total Rate']/following-sibling::input";
+    static public String inputEstimatedHours = "//label[normalize-space()='Estimated Hours']/following-sibling::input";
+    static public String dropdownMembers = "//label[normalize-space()='Members']/following-sibling::div/button[@data-toggle='dropdown']";
+    static public String inputSearchMembers = "//label[normalize-space()='Members']/following-sibling::div//input[@type='search']";
+    static public String inputStartDate = "//label[@for='start_date']/following-sibling::div//input";
+    static public String inputDeadline = "//label[@for='deadline']/following-sibling::div//input";
+    static public String inputTags = "//label[normalize-space()='Tags']/following-sibling::input";
+    static public String inputDescription = "//body[@data-id = 'description']";
+    static public String checkboxSend = "//label[normalize-space()='Send project created email']/preceding-sibling::input";
 
     // Tab Project Settings
-    static public String tabProjectSettings = "//a[normalize-space()='Project Settings']";
-    static public String inputSendContactsNotifications = "//button[@title='To all contacts with notifications for projects enabled']";
-    static public String inputVisibleTabs = "//button[@title='Tasks, Timesheets, Milestones, Files, Discussions, Gantt, Tickets, Contracts, Proposals, Estimates, Invoices, Subscriptions, Expenses, Credit Notes, Notes, Activity']";
-    static public String inputViewTasks = "//input[@id='view_tasks']";
-    static public String inputCreateTasks = "//input[@id='create_tasks']";
-    static public String inputEditTasks = "//input[@id='edit_tasks']";
-    static public String inputCommentOnTasks = "//input[@id='comment_on_tasks']";
-    static public String inputViewTaskComments = "//input[@id='view_task_comments']";
-    static public String inputViewAttachments = "//input[@id='view_task_attachments']";
-    static public String inputViewTaskChecklistItems = "//input[@id='view_task_checklist_items']";
-    static public String inputUploadOnTasks = "//input[@id='upload_on_tasks']";
-    static public String inputViewTaskTotalLoggedTime = "//input[@id='view_task_total_logged_time']";
-    static public String inputViewFinanceOverview = "//input[@id='view_finance_overview']";
-    static public String inputUploadFile = "//input[@id='upload_files']";
-    static public String inputOpenDiscussions = "//input[@id='open_discussions']";
-    static public String inputViewMilestones = "//input[@id='view_milestones']";
-    static public String inputViewGantt = "//input[@id='view_gantt']";
-    static public String inputViewTimesheets = "//input[@id='view_timesheets']";
-    static public String inputViewActivityLog = "//input[@id='view_activity_log']";
-    static public String inputViewTeamMembers = "//input[@id='view_team_members']";
-    static public String inputHideTasks = "//input[@id='hide_tasks_on_main_tasks_table']";
-
+    static public String tabProjectSettings = "//li[@role='presentation']/child::a[@aria-controls='tab_settings']";
+    static public String dropdownSendContactsNotifications = "//label[@for='contact_notification']/following-sibling::div//button";
+    static public String optionSendContactsNotifications = "//span[normalize-space()='Specific contacts']";
+    static public String dropdownSelectContactsToNotify = "//label[normalize-space()='* Select contacts to notify']/following-sibling::div//button";
+    static public String dropdownVisibleTabs = "//label[normalize-space()='Visible Tabs']/following-sibling::div//button[@data-toggle='dropdown']";
+    static public String buttonSelectAll = "//label[normalize-space()='Visible Tabs']/following-sibling::div//button[normalize-space()='Select All']";
+    static public String buttonDeselectAll = "//label[normalize-space()='Visible Tabs']/following-sibling::div//button[normalize-space()='Deselect All']";
+    static public String optionVisibleTabs = "//label[normalize-space()='Visible Tabs']/parent::div//span[normalize-space()='Tasks']";
+    static public String checkboxViewTasks = "//label[@for='view_tasks']/preceding-sibling::input";
+    static public String checkboxCreateTasks = "//label[@for='create_tasks']/preceding-sibling::input";
+    static public String checkboxEditTasks = "//label[@for='edit_tasks']/preceding-sibling::input";
+    static public String checkboxCommentOnTasks = "//label[@for='comment_on_tasks']/preceding-sibling::input";
+    static public String checkboxViewTaskComments = "//label[@for='view_task_comments']/preceding-sibling::input";
+    static public String checkboxViewAttachments = "//label[@for='view_task_attachments']/preceding-sibling::input";
+    static public String checkboxViewTaskChecklistItems = "//label[@for='view_task_checklist_items']/preceding-sibling::input";
+    static public String checkboxUploadOnTasks = "//label[@for='upload_on_tasks']/preceding-sibling::input";
+    static public String checkboxViewTaskTotalLoggedTime = "//label[@for='view_task_total_logged_time']/preceding-sibling::input";
+    static public String checkboxViewFinanceOverview = "//label[@for='view_finance_overview']/preceding-sibling::input";
+    static public String checkboxUploadFile = "//label[@for='upload_files']/preceding-sibling::input";
+    static public String checkboxOpenDiscussions = "//label[@for='open_discussions']/preceding-sibling::input";
+    static public String checkboxViewMilestones = "//label[@for='view_milestones']/preceding-sibling::input";
+    static public String checkboxViewGantt = "//label[@for='view_gantt']/preceding-sibling::input";
+    static public String checkboxViewTimesheets = "//label[@for='view_timesheets']/preceding-sibling::input";
+    static public String checkboxViewActivityLog = "//label[@for='view_activity_log']/preceding-sibling::input";
+    static public String checoboxViewTeamMembers = "//label[@for='view_team_members']/preceding-sibling::input";
+    static public String checkboxHideTasks = "//label[@for='hide_tasks_on_main_tasks_table']/preceding-sibling::input";
 }
