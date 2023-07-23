@@ -34,8 +34,10 @@ public class LocatorsCrm {
     static public String inputWebsite = "//input[@id='website']";
     static public String dropdownGroups = "//button[@data-id = 'groups_in[]']";
     static public String inputSearchGroups = "//div[@app-field-wrapper = 'groups_in[]']//input[@type = 'search']";
+    static public String optionGroups = "//span[normalize-space()='VIP']";
     static public String dropdownCurrency = "//button[@data-id = 'default_currency']";
     static public String inputSearchCurrency = "//div[@app-field-wrapper = 'default_currency']//input[@type = 'search']";
+    static public String optionCurrency =  "//span[contains(text(),'VNĐ')]";
     static public String dropdownDefaultLanguage = "//button[@data-id= 'default_language']";
     static public String optionVietnamese = "//span[normalize-space()='Vietnamese']";
     static public String inputAddress = "//textarea[@id='address']";
@@ -43,6 +45,7 @@ public class LocatorsCrm {
     static public String inputState = "//input[@id='state']";
     static public String inputZipCode = "//input[@id='zip']";
     static public String dropdownCountry = "//button[@data-id= 'country']";
+    static public String optionCountry ="//span[normalize-space()='Vietnam']";
     static public String inputSearchCountry = "//div[@app-field-wrapper = 'country']//input[@type = 'search']";
 
     // Tab Billing And Shipping
@@ -70,33 +73,39 @@ public class LocatorsCrm {
 
     // Add new project
     static public String headerAddNewProjectPage = "//form[@id='project_form']/descendant::h4[normalize-space()='Add new project']";
-    static public String buttonSave = "//div[@class='panel-footer text-right']/child::button";
+    static public String buttonSaveProject = "//div[@class='panel-footer text-right']/child::button";
 
     // Tab Project
     static public String tabProject = "//li[@role='presentation']/child::a[@aria-controls='tab_project']";
-    static public String inputProjectName = "//label[normalize-space()='* Project Name']/following-sibling::input]";
-    static public String dropdownCustomer = "//label[@for='clientid']/following-sibling::div//button;
-    static public String inputSearchCustomer = "//label[@for='clientid']/following-sibling::div//input;
+    static public String inputProjectName = "//label[normalize-space()='* Project Name']/following-sibling::input";
+    static public String dropdownCustomer = "//label[@for='clientid']/following-sibling::div//button";
+    static public String inputSearchCustomer = "//label[@for='clientid']/following-sibling::div//input";
+    static public String optionCustomer = "//span[normalize-space()='Cucumber2023']";
     static public String checkboxCalculateProgress = "//input[@id='progress_from_tasks']";
     static public String sliderProgress = "//label[contains(text(),'Progress')]/following-sibling::input[@name = 'progress']";
     static public String dropdowntBillingType = "//label[@for = 'billing_type']/following-sibling::div[contains(@class, 'dropdown ')]";
     static public String optionBillingType = "//span[normalize-space()='Project Hours']";
     static public String dropdownStatus = "//label[@for = 'status']/following-sibling::div[contains(@class, 'dropdown ')]";
     static public String optionStatus = "//span[normalize-space()='On Hold']";
-    static public String inputTotalRate = "//label[normalize-space()='Total Rate']/following-sibling::input";
+    static public String inputTotalRate = "//label[normalize-space()='Rate Per Hour']/following-sibling::input";
     static public String inputEstimatedHours = "//label[normalize-space()='Estimated Hours']/following-sibling::input";
     static public String dropdownMembers = "//label[normalize-space()='Members']/following-sibling::div/button[@data-toggle='dropdown']";
     static public String inputSearchMembers = "//label[normalize-space()='Members']/following-sibling::div//input[@type='search']";
+    static public String optionMembers = "//span[normalize-space()='Anh Tester']";
     static public String inputStartDate = "//label[@for='start_date']/following-sibling::div//input";
     static public String inputDeadline = "//label[@for='deadline']/following-sibling::div//input";
-    static public String inputTags = "//label[normalize-space()='Tags']/following-sibling::input";
+
+    // static public String inputTags = "//label[normalize-space()='Tags']/following-sibling::input";
+    static public String inputTags = " //input[@placeholder='Tag']";
+    static public String optionTags = "//li[@class='ui-menu-item']//div[normalize-space()='Automation Test']";
+
     static public String inputDescription = "//body[@data-id = 'description']";
     static public String checkboxSend = "//label[normalize-space()='Send project created email']/preceding-sibling::input";
 
     // Tab Project Settings
     static public String tabProjectSettings = "//li[@role='presentation']/child::a[@aria-controls='tab_settings']";
     static public String dropdownSendContactsNotifications = "//label[@for='contact_notification']/following-sibling::div//button";
-    static public String optionSendContactsNotifications = "//span[normalize-space()='Specific contacts']";
+    static public String optionSendContactsNotifications = "//span[normalize-space()='Do not send notifications']";
     static public String dropdownSelectContactsToNotify = "//label[normalize-space()='* Select contacts to notify']/following-sibling::div//button";
     static public String dropdownVisibleTabs = "//label[normalize-space()='Visible Tabs']/following-sibling::div//button[@data-toggle='dropdown']";
     static public String buttonSelectAll = "//label[normalize-space()='Visible Tabs']/following-sibling::div//button[normalize-space()='Select All']";
