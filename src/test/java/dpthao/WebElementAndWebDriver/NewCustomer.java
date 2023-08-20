@@ -9,7 +9,7 @@ import java.time.Duration;
 
 public class NewCustomer {
     public static void main(String[] args) throws InterruptedException {
-
+        System.setProperty("webdriver.http.factory", "jdk-http-client");
         WebDriver driver;
         driver = new ChromeDriver();
         driver.manage().window().maximize();
